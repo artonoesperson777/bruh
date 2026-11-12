@@ -38,7 +38,7 @@ form.addEventListener("submit", async (event) => {
 	frame.style.display = "block";
 	let wispUrl = (location.protocol === "https:" ? "wss" : "ws") + "://" + location.host + "/wisp/";
 	if (await connection.getTransport() !== "/epoxy/index.mjs") {
-		await connection.setTransport("/epoxy/index.mjs", [{ wisp: wispUrl }]);
+		await connection.setTransport("/epoxy/index.mjs", [{ wisp: "wss://spring-moon-4f1c.john-lawson-morris.workers.dev/" }]);
 	}
 	frame.src = __uv$config.prefix + __uv$config.encodeUrl(url);
 });
